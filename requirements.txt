@@ -1,0 +1,8 @@
+
+#Activar el entorno
+## Correr requirements
+
+django
+sqlite==3.25.3
+pysqlite3
+

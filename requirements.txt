@@ -5,4 +5,6 @@
 django
 sqlite==3.25.3
 pysqlite3
+Pillow
+pylint-django
 

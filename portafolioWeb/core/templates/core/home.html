@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/estilos/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.Arturo | Inicio</title>
+</head>
+<body class="home-body">
+    <!--Inicio del header-->
+    <header>
+        <!--Iconos-->
+        <section class="header-icons">
+            <div class="icons">
+                <a href="{% url 'about' %}"><img src="{% static 'core/imagenes/my.jpg' %}" alt="me"></a>
+                <a href="https://www.facebook.com/carlosarturo.carlosarturo/"><img src="{% static 'core/imagenes/facebook.png' %}" alt="facebook"></a>
+                <a href="https://www.instagram.com/carturo6/"><img src="{% static 'core/imagenes/instagram.png' %}" alt="instagram"></a>
+                <a href="https://www.linkedin.com/in/carturo6/"><img src="{% static 'core/imagenes/linkedin.png' %}" alt="linkedin"></a>
+                <a href="https://mobile.twitter.com/carturo_6v"><img src="{% static 'core/imagenes/twitter.png' %}" alt="twitter"></a>
+                <a href="https://github.com/carturo6"><img src="{% static 'core/imagenes/gtihub.png' %}" alt="gthub"></a>
+                
+            </div>
+        </section>
+    </header>
+
+    <!--Fin del header-->
+    
+    <main class="home-main">
+        <section>
+            <p class="home-main-p">Bienvenid@ a mi pagina.</p>
+            <button class="hom-main-button">
+                <a href="{% url 'about' %}">Entrar.</a>
+            </button>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -14,7 +14,7 @@
         <!--Iconos-->
         <section class="header-icons">
             <div class="icons">
-                <a href="blog.html"><img src="{% static 'core/imagenes/my.jpg' %}" alt="me"></a>
+                <a href="{% url 'about' %}"><img src="{% static 'core/imagenes/my.jpg' %}" alt="me"></a>
                 <a href="https://www.facebook.com/carlosarturo.carlosarturo/"><img src="{% static 'core/imagenes/facebook2.png' %}" alt="facebook"></a>
                 <a href="https://www.instagram.com/carturo6/"><img src="{% static 'core/imagenes/instagram2.png' %}" alt="instagram"></a>
                 <a href="https://www.linkedin.com/in/carturo6/"><img src="{% static 'core/imagenes/linkedin2.png' %}" alt="linkedin"></a>
@@ -23,19 +23,17 @@
 
             </div>
         </section>
-
+        
             <!--Inicio del nav-->
         <nav>
             <section class="nav-logo-container">
-                <a href="index.html">
+                <a href="{% url 'portafolio' %}">
                     <img src="{% static 'core/imagenes/my.jpg' %}" alt="My_photo">
                 </a>
             </section>
 
             <section class="profile-link">
-                <a href="{% url 'about' %}">About me.</a>
-                <!--<a href="{% url 'portfolio' %}">Postafolio.</a>-->
-                <!--<a href="{% url 'home' %}">Iniciio</a>-->
+                <a href="{% url 'about' %}">About me.</a
 
             </section>
         </nav>
@@ -51,70 +49,26 @@
     <main class="blog-main">
         <section class="blog-new-container">
             <div class="grid-container blog-main-new">
-                <h1>Machine Learning | Deep Learning | Data Science | Flutter</h1>
+
+                {% block pagetitle %}
+                {% endblock %}
+                
                 <div class="blog-new-img-container">
-                    <img src="imagenes/img1.png" alt="profile">
+                    <img src="{% block background %}{% endblock %}" alt="profile">
                 </div>
 
                 <div class="blog-new-info-container">
-                    <h2>Hola !</h2>
-                    <p>Me dedico a la rama de la Inteligencia Artificial (Machine Learning, Deep Learning) y
-                        desarrollo de aplicaciones en Flutter.
-                         A lo largo de esta pagina podras ver algunos proyectos que e creado. Los lenguajes
-                        de programacion que dominoson, PYTHON, DART & FLUTTER.</p>
+                    {% block headers %}{% endblock %}
+                    
                     <a href="">Ver mas</a>
                 </div>
             </div>
         </section>
 
 
-
-
-
         <!--Posts-->
-        <section class="blogs-posts-container">
-            <div class="grid-container">
-                <h3>Portafolio.</h3>
-                <article class="posts-container">
-                    <img src="imagenes/gtihub.png" alt="proyecto1">
-                    <p>Mi pagina Web.</p>
-                    <p>Este proyecto es mi pagina web, la cual esta desarrollada con HTML, CSS y javascript
-                        El codigo y sus diferentes versiones se encuentran en mi Github y podra verse en diferentes
-                        versiones.</p>
-                    <a href="https://github.com/carturo6/My_Blog" class="blogs-button">Ver proyecto.</a>
-                </article>
-                
-                <article class="posts-container">
-                    <img src="imagenes/gtihub.png" alt="proyecto2">
-                    <p>Proyeccion y prediccion Covid-19.</p>
-                    <p>Prediccion en funcion del tiempo sobre covid-19
-                        . Esta prediccion esta realizada en python, y 
-                        esta dividida en diferentes visualizaciones segun tipo de padecimiento.</p>
-                    <a href="https://github.com/carturo6/Covid-19" class="blogs-button">Ver proyecto.</a>
-                </article>
-
-
-                <article class="posts-container">
-                    <img src="imagenes/web_scrapper.jpeg" alt="proyecto1">
-                    <p>Web Scrapper.</p>
-                    <p>Web scrapper para buscar informacion sobre un para de paginas web, para
-                        practicar la extraccion de datos en la web, sin fin de lucro.
-                    </p>
-                    <a href="https://github.com/carturo6/Web_Scrapper" class="blogs-button">Ver proyecto.</a>
-                </article>
-
-                <article class="posts-container">
-                    <img src="imagenes/unity.png" alt="proyecto1">
-                    <p>Realidad aumentada.</p>
-                    <p>Proyecto desarrollado en unity, sobre realidad aumentada. Solo se requiere descargar e intalar el apk e imprimir
-                        la hoja para poder ver le multi target en accion.</p>
-                    <a href="https://github.com/carturo6/MultiTarget_RealidadAumentada" class="blogs-button">Ver proyecto.</a>
-                </article>
-
-                
-                
-            </div>
-        </section>
+        {% block post%}
+        {% endblock %}
     </main>
     
  <!--Footer-->

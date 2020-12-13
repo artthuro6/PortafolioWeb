@@ -50,14 +50,18 @@
         <section class="blog-new-container">
             <div class="grid-container blog-main-new">
 
+                <!--Inicio Nombre de la pagina-->
                 {% block pagetitle %}
                 {% endblock %}
+                <!--Fin Nombre de la pagina-->
                 
                 <div class="blog-new-img-container">
                     <img src="{% block background %}{% endblock %}" alt="profile">
                 </div>
 
                 <div class="blog-new-info-container">
+
+                    <!--Info de la pag. actual-->
                     {% block headers %}{% endblock %}
                     
                     <a href="">Ver mas</a>
@@ -65,10 +69,18 @@
             </div>
         </section>
 
+        {% if request.path == "/" %}
+            <hr>
+        {% endif %}
 
+        <!--Portafolio-->
         <!--Posts-->
         {% block post%}
         {% endblock %}
+        <!--Fin Portafolio-->
+        <!--Fin Posts-->
+
+
     </main>
     
  <!--Footer-->

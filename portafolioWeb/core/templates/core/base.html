@@ -69,16 +69,20 @@
             </div>
         </section>
 
-        {% if request.path == "/" %}
-            <hr>
-        {% endif %}
-
         <!--Portafolio-->
         <!--Posts-->
-        {% block post%}
-        {% endblock %}
+        <section class="blogs-posts-container">
+            <div class="grid-container">
+                <h3>{% block namePage %}{% endblock%}</h3>
+                
+                    {% block post%}
+                    {% endblock %}
+
+            </div>
+        </section>
         <!--Fin Portafolio-->
         <!--Fin Posts-->
+    
 
 
     </main>
